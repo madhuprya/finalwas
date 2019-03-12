@@ -104,21 +104,21 @@ services:
     expose:
       - 8888
 
-#  question-manager-service:
-#    image: question-manager-service
-#    build: question-manager-service/
-#    restart: always
-#    network_mode: host
-#    depends_on:
-#      - kafka
-#      - mongo
-#      - eurekaserver
-#      - configserver
-#      - apigateway
-#    ports:
-#      - 8001:8001
-#    expose:
-#      - 8001
+  question-manager-service:
+    image: question-manager-service
+    build: question-manager-service/
+    restart: always
+    network_mode: host
+    depends_on:
+      - kafka
+      - mongo
+      - eurekaserver
+      - configserver
+      - apigateway
+    ports:
+      - 8001:8001
+    expose:
+      - 8001
 
 #  game-manager-service:
 #    image: game-manager-service
